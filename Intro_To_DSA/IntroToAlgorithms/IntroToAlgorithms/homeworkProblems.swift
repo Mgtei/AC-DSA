@@ -15,7 +15,24 @@ import Foundation
 
 
 func posZeroNeg(myArr: [Int]) -> (Int, Int, Int) {
-    return (0,0,0)
+    var negCounter = 0
+    var zeroCounter = 0
+    var posCounter = 0
+    for element in myArr {
+        if element < 0 {
+            negCounter += 1
+        } else {
+            if element == 0 {
+                zeroCounter += 1
+            } else {
+                if element > 0 {
+                    posCounter += 1
+                }
+            }
+        }
+        
+    }
+return (negCounter,zeroCounter,posCounter)
 }
 
 
